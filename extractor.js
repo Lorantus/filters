@@ -82,7 +82,7 @@ const createExtractorParser = function () {
         },
         
         withFiltersAndValues(filtersAndValues = []) {
-            this.filtersAndValues = filtersAndValues;
+            this.filtersAndValues = Array.isArray(filtersAndValues) ? filtersAndValues : [filtersAndValues];
             return this;
         },
 
